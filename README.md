@@ -1,54 +1,88 @@
-# React + TypeScript + Vite
+## Character Counter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Project description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+An interactive React app that tracks text input in real time — counting characters, words, and estimating reading time. Built as part of a frontend lab focused on state management, event handling, and component communication using React with TypeScript and Tailwind CSS.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Table of contents
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Overview
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+This project was built as part of a lab that simulates a real-world content management use case. I created a character counter component that provides live feedback as users type — showing the number of characters, words, and an estimated reading time.
+
+The goal was to better understand how to manage state in React, handle user events, and use props and callbacks to connect components. This app could be used in a writing or blogging platform to help writers stay on track with their word count and content length goals.
+
+### The challenge
+
+The challenge was to build a component-based React application that:
+
+- Tracks live text input and updates statistics in real time
+- Uses React hooks like 'useState'for state management
+- Passes props and uses callback functions to communicate between components
+- Responds to user input with visual feedback
+- Provides flexibility through reusable components
+
+I also had to calculate and display statistics like:
+- Total character count
+- Word count
+- Estimated reading time (in minutes)
+
+This helped me practice thinking through how data flows through components in a React app.
+
+### Screenshot
+
+![](./src/assets/image-character-counter1.png)
+![](./src/assets/image-character-counter2.png)
+
+
+### Built with
+
+- React
+- TypeScript
+- Tailwind CSS
+- JSX
+
+
+### What I learned
+
+This project helped me get more comfortable with core React concepts like:
+- Passing props and using callback functions
+- Managing local state using the 'useState' hook
+- Creating flexible, reusable components that work together
+- Conditional rendering based on user input
+
+
+### Continued development
+
+While I made strong progress in this lab, I’m still early in my React learning journey. Here’s what I plan to focus on next:
+
+- Building more small projects to reinforce React fundamentals
+- Practicing 'useEffect', 'useContext', and other React hooks
+- Getting better at passing props between deeply nested components
+- Using conditional rendering more confidently in real-world interfaces
+- Improving accessibility and making sure UI feedback is clear for all users
+- Writing clean, maintainable code that scales across components
+
+My long-term goal is to confidently build full, interactive apps with React — using thoughtful component design, solid state management, and clean code structure.
+
+
+
+## Author
+
+- GitHub - [KaeLoma777](https://github.com/KaeLoma777)
+
+## Acknowledgments
+- My coding bootcamp instructors and mentors
+- I'm incredibly grateful to my classmate [Yusuf Bolden](https://github.com/YusufBolden) for generously taking the time to teach me React fundamentals and walk me through the project step by step. This project wouldn't have been possible without their guidance and support.
